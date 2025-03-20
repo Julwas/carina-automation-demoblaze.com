@@ -17,11 +17,11 @@ package com.zebrunner.carina.demo.gui.pages.ios;
 
 import java.util.List;
 
+import com.zebrunner.carina.demo.gui.components.NewsItem;
 import com.zebrunner.carina.webdriver.locator.Context;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-import com.zebrunner.carina.demo.gui.components.NewsItem;
 import com.zebrunner.carina.demo.gui.pages.common.NewsPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;

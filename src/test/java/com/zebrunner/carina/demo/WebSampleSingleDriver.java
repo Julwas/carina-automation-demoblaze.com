@@ -18,16 +18,15 @@ package com.zebrunner.carina.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs;
+import com.zebrunner.carina.demo.gui.components.footer.FooterMenuBase;
+import com.zebrunner.carina.demo.gui.pages.common.CompareModelsPageBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.zebrunner.carina.demo.gui.components.footer.FooterMenuBase;
-import com.zebrunner.carina.demo.gui.pages.common.CompareModelsPageBase;
 import com.zebrunner.carina.demo.gui.pages.common.HomePageBase;
-import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs;
-import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs.SpecType;
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.agent.core.annotation.TestLabel;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
@@ -82,11 +81,11 @@ public class WebSampleSingleDriver implements IAbstractTest {
     @TestLabel(name = "feature", value = {"web", "acceptance"})
     public void testCompareModels() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(specs.get(0).readSpec(SpecType.ANNOUNCED), "2016, March 31");
-        softAssert.assertEquals(specs.get(1).readSpec(SpecType.ANNOUNCED), "2015, June 19");
+        softAssert.assertEquals(specs.get(0).readSpec(ModelSpecs.SpecType.ANNOUNCED), "2016, March 31");
+        softAssert.assertEquals(specs.get(1).readSpec(ModelSpecs.SpecType.ANNOUNCED), "2015, June 19");
         //for desktop could be compared 3 devices, when for mobile only 2
         if (specs.size() > 2) {
-            softAssert.assertEquals(specs.get(2).readSpec(SpecType.ANNOUNCED), "2017, June");
+            softAssert.assertEquals(specs.get(2).readSpec(ModelSpecs.SpecType.ANNOUNCED), "2017, June");
         }
         softAssert.assertAll();
     }

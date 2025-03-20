@@ -18,6 +18,7 @@ package com.zebrunner.carina.demo;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNull;
 
+import com.zebrunner.carina.demo.utils.ConnectionFactory;
 import org.apache.ibatis.session.SqlSession;
 import org.testng.annotations.Test;
 
@@ -27,7 +28,6 @@ import com.zebrunner.carina.demo.db.mappers.UserPreferenceMapper;
 import com.zebrunner.carina.demo.db.models.User;
 import com.zebrunner.carina.demo.db.models.User.Status;
 import com.zebrunner.carina.demo.db.models.UserPreference;
-import com.zebrunner.carina.demo.utils.ConnectionFactory;
 import com.zebrunner.agent.core.annotation.TestLabel;
 
 /**

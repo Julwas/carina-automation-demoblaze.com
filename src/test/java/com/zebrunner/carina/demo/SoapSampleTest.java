@@ -1,11 +1,11 @@
 package com.zebrunner.carina.demo;
 
+import com.zebrunner.carina.demo.soap.AddIntegerMethod;
+import com.zebrunner.carina.demo.soap.LookupCityMethod;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.demo.soap.AddIntegerMethod;
-import com.zebrunner.carina.demo.soap.LookupCityMethod;
 import com.zebrunner.carina.api.apitools.validation.XmlCompareMode;
 
 import io.restassured.path.xml.XmlPath;

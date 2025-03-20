@@ -15,10 +15,10 @@
  *******************************************************************************/
 package com.zebrunner.carina.demo;
 
+import com.zebrunner.carina.demo.pages.ios.SaucePage;
 import org.testng.annotations.Test;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.demo.mobile.gui.pages.ios.SaucePage;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
 
 public class IOSSafariTest implements IAbstractTest, IMobileUtils {

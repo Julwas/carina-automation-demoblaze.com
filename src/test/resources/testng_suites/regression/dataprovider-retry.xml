@@ -18,7 +18,7 @@
 
 	<test name="DataProvider with Retry">
 		<classes>
-			<class name="com.zebrunner.carina.demo.regression.dataprovider.DataproviderRetryTest">
+			<class name="com.zebrunner.carina.demo.dataprovider.DataproviderRetryTest">
 				<methods>
 					<include name="testDataproviderRetry"/>
 				</methods>

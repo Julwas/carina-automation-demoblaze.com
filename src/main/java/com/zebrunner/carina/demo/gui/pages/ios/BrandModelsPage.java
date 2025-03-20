@@ -17,12 +17,12 @@ package com.zebrunner.carina.demo.gui.pages.ios;
 
 import java.util.List;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.FindBy;
-
 import com.zebrunner.carina.demo.gui.components.ModelItem;
 import com.zebrunner.carina.demo.gui.pages.common.BrandModelsPageBase;
 import com.zebrunner.carina.demo.gui.pages.common.ModelInfoPageBase;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.FindBy;
+
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 

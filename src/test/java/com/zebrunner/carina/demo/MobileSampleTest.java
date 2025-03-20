@@ -15,19 +15,18 @@
  *******************************************************************************/
 package com.zebrunner.carina.demo;
 
+import com.zebrunner.carina.demo.utils.MobileContextUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.demo.mobile.gui.pages.common.CarinaDescriptionPageBase;
-import com.zebrunner.carina.demo.mobile.gui.pages.common.ContactUsPageBase;
-import com.zebrunner.carina.demo.mobile.gui.pages.common.LoginPageBase;
-import com.zebrunner.carina.demo.mobile.gui.pages.common.UIElementsPageBase;
-import com.zebrunner.carina.demo.mobile.gui.pages.common.WebViewPageBase;
-import com.zebrunner.carina.demo.mobile.gui.pages.common.WelcomePageBase;
-import com.zebrunner.carina.demo.utils.MobileContextUtils;
-import com.zebrunner.carina.demo.utils.MobileContextUtils.View;
+import com.zebrunner.carina.demo.pages.common.CarinaDescriptionPageBase;
+import com.zebrunner.carina.demo.pages.common.ContactUsPageBase;
+import com.zebrunner.carina.demo.pages.common.LoginPageBase;
+import com.zebrunner.carina.demo.pages.common.UIElementsPageBase;
+import com.zebrunner.carina.demo.pages.common.WebViewPageBase;
+import com.zebrunner.carina.demo.pages.common.WelcomePageBase;
 import com.zebrunner.agent.core.annotation.TestLabel;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
@@ -62,10 +61,10 @@ public class MobileSampleTest implements IAbstractTest, IMobileUtils {
         WebViewPageBase webViewPageBase = initPage(getDriver(), WebViewPageBase.class);
         MobileContextUtils contextHelper = new MobileContextUtils();
 
-        contextHelper.switchMobileContext(View.WEB_CARINA);
+        contextHelper.switchMobileContext(MobileContextUtils.View.WEB_CARINA);
         ContactUsPageBase contactUsPage = webViewPageBase.goToContactUsPage();
 
-        contextHelper.switchMobileContext(View.WEB_BROWSER, View.WEB_CARINA);
+        contextHelper.switchMobileContext(MobileContextUtils.View.WEB_BROWSER, MobileContextUtils.View.WEB_CARINA);
 
         contactUsPage.typeName("John Doe");
         contactUsPage.typeEmail("some@email.com");

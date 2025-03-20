@@ -17,9 +17,9 @@ package com.zebrunner.carina.demo.gui.pages.common;
 
 import java.util.List;
 
+import com.zebrunner.carina.demo.gui.components.ModelItem;
 import org.openqa.selenium.WebDriver;
 
-import com.zebrunner.carina.demo.gui.components.ModelItem;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 
 public abstract class BrandModelsPageBase extends AbstractPage {

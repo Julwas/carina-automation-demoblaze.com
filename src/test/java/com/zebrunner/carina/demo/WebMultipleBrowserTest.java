@@ -17,6 +17,7 @@ package com.zebrunner.carina.demo;
 
 import java.util.List;
 
+import com.zebrunner.carina.demo.gui.components.NewsItem;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -26,7 +27,6 @@ import org.testng.asserts.SoftAssert;
 
 import com.zebrunner.carina.demo.gui.pages.common.HomePageBase;
 import com.zebrunner.carina.demo.gui.pages.common.NewsPageBase;
-import com.zebrunner.carina.demo.gui.components.NewsItem;
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import com.zebrunner.carina.webdriver.Screenshot;

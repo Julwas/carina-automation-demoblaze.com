@@ -49,7 +49,7 @@ public class APISampleTest implements IAbstractTest {
         LOGGER.info("test");
         setCases("4555,54545");
         PostUserMethod api = new PostUserMethod();
-        api.setProperties("api/users/user.properties");
+        api.setProperties("api/user.properties");
 
         AtomicInteger counter = new AtomicInteger(0);
 
@@ -67,7 +67,7 @@ public class APISampleTest implements IAbstractTest {
     @MethodOwner(owner = "qpsdemo")
     public void testCreateUserMissingSomeFields() throws Exception {
         PostUserMethod api = new PostUserMethod();
-        api.setProperties("api/users/user.properties");
+        api.setProperties("api/user.properties");
         api.getProperties().remove("name");
         api.getProperties().remove("username");
         api.callAPIExpectSuccess();
@@ -88,7 +88,7 @@ public class APISampleTest implements IAbstractTest {
     @TestPriority(Priority.P1)
     public void testDeleteUsers() {
         DeleteUserMethod deleteUserMethod = new DeleteUserMethod();
-        deleteUserMethod.setProperties("api/users/user.properties");
+        deleteUserMethod.setProperties("api/user.properties");
         deleteUserMethod.callAPIExpectSuccess();
         deleteUserMethod.validateResponse();
     }

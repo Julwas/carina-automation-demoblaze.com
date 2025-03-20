@@ -15,12 +15,12 @@
  *******************************************************************************/
 package com.zebrunner.carina.demo;
 
+import com.zebrunner.carina.demo.pages.ios.PreferencesPage;
+import com.zebrunner.carina.demo.utils.MobileContextUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.demo.mobile.gui.pages.ios.PreferencesPage;
-import com.zebrunner.carina.demo.utils.MobileContextUtils;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
 
 import io.appium.java_client.InteractsWithApps;

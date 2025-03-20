@@ -15,9 +15,9 @@
  *******************************************************************************/
 package com.zebrunner.carina.demo.gui.pages.desktop;
 
+import com.zebrunner.carina.demo.gui.pages.common.CompareModelsPageBase;
 import com.zebrunner.carina.demo.gui.components.compare.CandidateBlock;
 import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs;
-import com.zebrunner.carina.demo.gui.pages.common.CompareModelsPageBase;
 import com.zebrunner.carina.utils.config.Configuration;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.config.WebDriverConfiguration;

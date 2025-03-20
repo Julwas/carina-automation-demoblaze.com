@@ -18,13 +18,13 @@ package com.zebrunner.carina.demo.gui.pages.ios;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.zebrunner.carina.demo.gui.components.compare.CandidateBlock;
+import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs;
+import com.zebrunner.carina.demo.gui.pages.common.CompareModelsPageBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-import com.zebrunner.carina.demo.gui.components.compare.CandidateBlock;
-import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs;
-import com.zebrunner.carina.demo.gui.pages.common.CompareModelsPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 

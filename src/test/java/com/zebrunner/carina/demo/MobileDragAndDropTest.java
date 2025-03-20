@@ -1,10 +1,10 @@
 package com.zebrunner.carina.demo;
 
+import com.zebrunner.carina.demo.pages.android.DragAndDropPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.demo.mobile.gui.pages.android.DragAndDropPage;
 import com.zebrunner.agent.core.annotation.TestLabel;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import com.zebrunner.carina.utils.R;

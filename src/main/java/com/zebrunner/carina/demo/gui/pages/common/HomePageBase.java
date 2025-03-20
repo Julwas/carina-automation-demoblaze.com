@@ -15,11 +15,11 @@
  *******************************************************************************/
 package com.zebrunner.carina.demo.gui.pages.common;
 
+import com.zebrunner.carina.demo.gui.components.footer.FooterMenuBase;
 import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-import com.zebrunner.carina.demo.gui.components.footer.FooterMenuBase;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 

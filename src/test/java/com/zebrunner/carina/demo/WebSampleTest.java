@@ -20,6 +20,8 @@ import java.util.List;
 import com.zebrunner.carina.demo.gui.components.ModelItem;
 import com.zebrunner.carina.demo.gui.components.NewsItem;
 import com.zebrunner.carina.demo.gui.components.compare.ModelSpecs;
+import com.zebrunner.carina.demo.gui.pages.common.CompareModelsPageBase;
+import com.zebrunner.carina.demo.gui.pages.common.ModelInfoPageBase;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
@@ -28,9 +30,7 @@ import org.testng.asserts.SoftAssert;
 
 import com.zebrunner.carina.demo.gui.pages.common.AllBrandsPageBase;
 import com.zebrunner.carina.demo.gui.pages.common.BrandModelsPageBase;
-import com.zebrunner.carina.demo.gui.pages.common.CompareModelsPageBase;
 import com.zebrunner.carina.demo.gui.pages.common.HomePageBase;
-import com.zebrunner.carina.demo.gui.pages.common.ModelInfoPageBase;
 import com.zebrunner.carina.demo.gui.pages.common.NewsPageBase;
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.agent.core.annotation.TestLabel;
