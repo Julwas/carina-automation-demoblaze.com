@@ -8,38 +8,40 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DemoblazeTests implements IAbstractTest {
-    @Test
-    public void testLoginSuccess() {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        homePage.clickLogin();
+    @Test(dataProvider = "registrationData", dataProviderClass = TestData.class)
+    public void testLoginSuccess(String username, String password) {
+        //HomePage homePage = new HomePage(getDriver());
+        //homePage.open();
+        //homePage.clickLogin();
 
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.login("testuser", "testpassword");
+        loginPage.open();
+        loginPage.clickLogIn();
+        pause(2);
+        loginPage.logIn(username, password);
 
         Assert.assertTrue(loginPage.isUserLoggedIn(), "User login failed!");
     }
 
-    @Test
-    public void testLoginFailure() {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        homePage.clickLogin();
-
+    @Test(dataProvider = "registrationData", dataProviderClass = TestData.class)
+    public void testLoginFailure(String username, String password) {
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.login("wronguser", "wrongpassword");
-
+        loginPage.open();
+        loginPage.clickLogIn();
+        pause(2);
+        loginPage.logInFailure(username, password);
+        loginPage.isUserFailure();
         Assert.assertTrue(loginPage.isErrorDisplayed(), "Error message not displayed for invalid login!");
     }
 
-    @Test
-    public void testLogout() {
+    @Test(dataProvider = "registrationData", dataProviderClass = TestData.class)
+    public void testLogout(String username, String password) {//дописать и поменять loginPge tp HomePage
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         homePage.clickLogin();
 
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.login("testuser", "testpassword");
+        loginPage.logIn(username, password);
 
         homePage.clickLogout();
 
@@ -90,7 +92,7 @@ public class DemoblazeTests implements IAbstractTest {
     public void testSignup() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
-        homePage.clickSignUp();
+        //homePage.clickSignUp();
 
         // Ввести данные для регистрации и проверить успешное сообщение
     }

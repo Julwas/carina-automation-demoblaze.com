@@ -15,8 +15,8 @@ public class TestData {
     @DataProvider(name = "registrationData")
     public static Object[][] registrationData() {
         return new Object[][]{
-                {"Lila", "password1"}, // Тестовые данные для регистрации 1
-               // {"Lilas", "password2"} // Тестовые данные для регистрации 2
+                {"Lilia5", "password1"}, // Тестовые данные для регистрации 1
+                {"Lilia", "password2"} // Тестовые данные для регистрации 2
         };
     }
 

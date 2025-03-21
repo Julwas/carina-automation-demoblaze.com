@@ -19,9 +19,7 @@ public class HomePage extends AbstractPage {
         super(driver);
     }
 
-    public void clickSignUp() {
-        signUpButton.click();
-    }
+
 
     public void clickLogin() {
         loginButton.click();
