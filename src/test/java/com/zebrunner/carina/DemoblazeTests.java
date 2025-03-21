@@ -1,75 +1,82 @@
 package com.zebrunner.carina;
 
 import com.zebrunner.carina.core.IAbstractTest;
+import com.zebrunner.carina.myGui.components.OrderModal;
 import com.zebrunner.carina.myGui.pages.CartPage;
 import com.zebrunner.carina.myGui.pages.HomePage;
-import com.zebrunner.carina.myGui.pages.LoginPage;
+import com.zebrunner.carina.myGui.pages.ProductPage;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class DemoblazeTests implements IAbstractTest {
+    /*private  HomePage homePage;
+    @BeforeMethod
+    public void startDriver(){
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+    }
     @Test(dataProvider = "registrationData", dataProviderClass = TestData.class)
     public void testLoginSuccess(String username, String password) {
-        //HomePage homePage = new HomePage(getDriver());
-        //homePage.open();
-        //homePage.clickLogin();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.open();
-        loginPage.clickLogIn();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        homePage.clickLogIn();
         pause(2);
-        loginPage.logIn(username, password);
+        homePage.logIn(username, password);
 
-        Assert.assertTrue(loginPage.isUserLoggedIn(), "User login failed!");
+        Assert.assertTrue(homePage.isUserLoggedIn(), "User login failed!");
     }
-
-    @Test(dataProvider = "registrationData", dataProviderClass = TestData.class)
-    public void testLoginFailure(String username, String password) {
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.open();
-        loginPage.clickLogIn();
-        pause(2);
-        loginPage.logInFailure(username, password);
-        loginPage.isUserFailure();
-        Assert.assertTrue(loginPage.isErrorDisplayed(), "Error message not displayed for invalid login!");
-    }
-
-    @Test(dataProvider = "registrationData", dataProviderClass = TestData.class)
+   @Test(dataProvider = "registrationData", dataProviderClass = TestData.class)
     public void testLogout(String username, String password) {//дописать и поменять loginPge tp HomePage
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
-        homePage.clickLogin();
+        homePage.clickLogIn();
+        homePage.logIn(username, password);
 
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.logIn(username, password);
-
+        Assert.assertTrue(homePage.isUserLoggedIn(), "User login failed!");
         homePage.clickLogout();
-
-        Assert.assertFalse(loginPage.isUserLoggedIn(), "Logout failed!");
+        Assert.assertTrue(homePage.isLogInVisible());
+    }
+    @Test(dataProvider = "loginData", dataProviderClass = TestData.class)
+    public void testLoginFailure(String username, String password) {
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        homePage.clickLogIn();
+        pause(2);
+        homePage.logInFailure(username, password);
+        homePage.isUserFailure();
+        Assert.assertTrue(homePage.isLogInVisible(), "Error message not displayed for invalid login!");
     }
 
-    @Test
+   @Test
+   @Parameters({"driver"})
     public void testAddToCart() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
-
-        // Перейти в категорию и добавить товар (добавить PageObject для товаров)
-
-        CartPage cartPage = new CartPage(getDriver());
+       ProductPage productPage = homePage.selectFirstProduct();
+       productPage.addToCart();
+        CartPage cartPage = homePage.openCart();
+        cartPage.placeOrder();
         Assert.assertTrue(cartPage.isItemInCart(), "Item not added to cart!");
-    }
+    }*/
 
-    @Test
-    public void testPlaceOrder() {
+    @Test(dataProvider = "orderData", dataProviderClass = TestData.class)
+    public void testPlaceOrder(String name, String country, String city, String creditCard, String month, String year) {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
-
-        // Добавить товар в корзину (использовать PageObject товаров)
-
-        CartPage cartPage = new CartPage(getDriver());
+        ProductPage productPage = homePage.selectFirstProduct();
+        productPage.addToCart();
+        CartPage cartPage = homePage.openCart();
         cartPage.placeOrder();
+        OrderModal orderModal = new OrderModal(getDriver());
+        orderModal.fillOrderForm(name, country, city, creditCard, month, year);
+        orderModal.confirmOrder();
 
-        // Проверить успешное сообщение о заказе
+        // Проверка успешного сообщения о завершении заказа
+        String successMessage = orderModal.getSuccessMessage();
+        Assert.assertTrue(successMessage.contains("Thank you for your purchase!"), "Order was not placed successfully!");
+        orderModal.ok();
     }
 
     @Test
