@@ -7,12 +7,13 @@ import com.zebrunner.carina.api.http.HttpMethodType;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
-@Endpoint(url = "${base_url}/projects", methodType = HttpMethodType.GET)
-@ResponseTemplatePath(path = "api/projects/projects/_get/rs.json")
+@Endpoint(url = "${base_url}/users/${userId}", methodType = HttpMethodType.GET)
+@ResponseTemplatePath(path = "api/users/users/_get_one/rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-public class GetProjectsMethod extends BaseApiMethodV2 {
-    public GetProjectsMethod() {
-        super(null, "api/projects/projects/_get/rs.json");
+public class GetUserByIdMethod extends BaseApiMethodV2 {
+    public GetUserByIdMethod(String userId) {
+        super(null, "api/users/users/_get_one/rs.json");
         replaceUrlPlaceholder("base_url", Configuration.getRequired("api_url"));
+        replaceUrlPlaceholder("userId", Configuration.getRequired("userId"));
     }
 }

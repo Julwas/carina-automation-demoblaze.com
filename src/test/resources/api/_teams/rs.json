@@ -1,0 +1,23 @@
+{
+  "data": {
+    "id": 3,
+    "name": "Tester teams 1",
+    "description": "Quality Assurance Engineers.",
+    "members_count": 0,
+    "endpoints": {
+      "show": "https://juli12.testmonitor.com/api/v1/teams/3",
+      "activities": "https://juli12.testmonitor.com/api/v1/team/3/activities",
+      "update": "https://juli12.testmonitor.com/api/v1/teams/3",
+      "destroy": "https://juli12.testmonitor.com/api/v1/teams/3",
+      "restore": "https://juli12.testmonitor.com/api/v1/team/3/restore",
+      "members": "https://juli12.testmonitor.com/api/v1/team/3/members",
+      "non-members": "https://juli12.testmonitor.com/api/v1/team/3/non-members"
+    },
+    "links": {
+      "show": "https://juli12.testmonitor.com/settings/teams/3"
+    },
+    "created_at": "2025-03-24T17:26:57.000000Z",
+    "updated_at": "2025-03-24T17:26:57.000000Z",
+    "deleted_at": null
+  }
+}

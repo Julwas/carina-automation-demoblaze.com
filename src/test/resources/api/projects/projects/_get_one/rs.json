@@ -1,0 +1,35 @@
+{
+  "data": {
+    "id": 4,
+    "name": "proj1",
+    "description": "d",
+    "key": "4",
+    "starts_at": null,
+    "ends_at": null,
+    "completed_at": null,
+    "uses_messages": true,
+    "uses_requirements": true,
+    "uses_risks": false,
+    "uses_applications": false,
+    "uses_issues": true,
+    "completed": false,
+    "symbol_id": 2,
+    "endpoints": {
+      "show": "https://juli12.testmonitor.com/api/v1/projects/4",
+      "activities": "https://juli12.testmonitor.com/api/v1/project/4/activities",
+      "update": "https://juli12.testmonitor.com/api/v1/projects/4",
+      "archive": "https://juli12.testmonitor.com/api/v1/project/4/archive",
+      "unarchive": "https://juli12.testmonitor.com/api/v1/project/4/restore",
+      "members": "https://juli12.testmonitor.com/api/v1/project/4/members",
+      "non-members": "https://juli12.testmonitor.com/api/v1/project/4/non-members"
+    },
+    "links": {
+      "show": "https://juli12.testmonitor.com/settings/projects/4",
+      "select": "https://juli12.testmonitor.com/setup/select-project/4",
+      "integrations": "https://juli12.testmonitor.com/settings/integrations/4"
+    },
+    "created_at": "2025-03-22T22:54:41.000000Z",
+    "updated_at": "2025-03-22T22:54:41.000000Z",
+    "deleted_at": null
+  }
+}

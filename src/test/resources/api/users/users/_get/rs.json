@@ -1,0 +1,32 @@
+{
+  "data": [
+  {
+    "id": 3,
+    "email": "ohndoe@testmonitor.com",
+    "name": "ane Doe",
+    "first_name": "ane",
+    "last_name": "Doe"
+  },
+  {
+    "id": 4,
+    "email": "Goodie@testmonitor.com",
+    "name": "Anela Goodie",
+    "first_name": "Anela",
+    "last_name": "Goodie"
+  },
+  {
+    "id": 2,
+    "email": "johndoe@testmonitor.com",
+    "name": "John Doe",
+    "first_name": "John",
+    "last_name": "Doe"
+  },
+  {
+    "id": 1,
+    "email": "me-juli@yandex.by",
+    "name": "JULIA WASILEWSKA",
+    "first_name": "JULIA",
+    "last_name": "WASILEWSKA"
+  }
+]
+}

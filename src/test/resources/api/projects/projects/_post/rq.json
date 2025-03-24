@@ -1,0 +1,14 @@
+{
+  "name": "proj3",
+  "symbol_id": 3,
+  "description": "some description",
+  "uses_messages": 1,
+  "uses_requirements": 1,
+  "uses_risks": false,
+  "uses_applications": false,
+  "uses_issues": 1,
+  "starts_at": "",
+  "ends_at": "",
+  "apply_template": false,
+  "template_id": ""
+}

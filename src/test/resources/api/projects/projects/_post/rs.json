@@ -1,0 +1,63 @@
+{
+  "data": {
+    "id": "${id}",
+    "name": "proj3",
+    "description": "some description",
+    "key": "proj3",
+    "starts_at": null,
+    "ends_at": null,
+    "completed_at": null,
+    "uses_messages": true,
+    "uses_requirements": true,
+    "uses_risks": false,
+    "uses_applications": false,
+    "uses_issues": true,
+    "completed": false,
+    "symbol_id": 3,
+    "endpoints": {
+      "show": "https://juli12.testmonitor.com/api/v1/projects/3",
+      "activities": "https://juli12.testmonitor.com/api/v1/project/3/activities",
+      "update": "https://juli12.testmonitor.com/api/v1/projects/3",
+      "archive": "https://juli12.testmonitor.com/api/v1/project/3/archive",
+      "unarchive": "https://juli12.testmonitor.com/api/v1/project/3/restore",
+      "members": "https://juli12.testmonitor.com/api/v1/project/3/members",
+      "non-members": "https://juli12.testmonitor.com/api/v1/project/3/non-members"
+    },
+    "links": {
+      "show": "https://juli12.testmonitor.com/settings/projects/3",
+      "select": "https://juli12.testmonitor.com/setup/select-project/3",
+      "integrations": "https://juli12.testmonitor.com/settings/integrations/3"
+    },
+    "created_at": "2025-03-22T22:41:53.000000Z",
+    "updated_at": "2025-03-22T22:41:53.000000Z",
+    "deleted_at": null,
+    "created_by": {
+      "id": 1,
+      "email": "me-juli@yandex.by",
+      "name": "JULIA WASILEWSKA",
+      "first_name": "JULIA",
+      "last_name": "WASILEWSKA",
+      "admin": true,
+      "owner": true,
+      "last_login_at": "2025-03-22T21:49:52.000000Z",
+      "two_factor": false,
+      "locale": null,
+      "timezone": "Europe/Warsaw",
+      "project_id": 1,
+      "endpoints": {
+        "show": "https://juli12.testmonitor.com/api/v1/users/1",
+        "activities": "https://juli12.testmonitor.com/api/v1/user/1/activities",
+        "update": "https://juli12.testmonitor.com/api/v1/users/1",
+        "destroy": "https://juli12.testmonitor.com/api/v1/users/1",
+        "archive": "https://juli12.testmonitor.com/api/v1/user/1/archive"
+      },
+      "links": {
+        "show": "https://juli12.testmonitor.com/settings/users/1",
+        "avatar": "https://juli12.testmonitor.com/avatar/1"
+      },
+      "created_at": "2025-03-22T21:49:51.000000Z",
+      "updated_at": "2025-03-22T22:32:45.000000Z",
+      "deleted_at": null
+    }
+  }
+}
