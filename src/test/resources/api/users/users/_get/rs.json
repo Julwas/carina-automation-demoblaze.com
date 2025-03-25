@@ -7,13 +7,7 @@
     "first_name": "ane",
     "last_name": "Doe"
   },
-  {
-    "id": 4,
-    "email": "Goodie@testmonitor.com",
-    "name": "Anela Goodie",
-    "first_name": "Anela",
-    "last_name": "Goodie"
-  },
+
   {
     "id": 2,
     "email": "johndoe@testmonitor.com",

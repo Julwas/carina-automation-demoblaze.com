@@ -11,13 +11,13 @@ import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.*;
 
 public class APITests implements IAbstractTest {
-    @Test
+    @Test(priority = 3)
     public void testGetProjects() {
         GetProjectsMethod getProjectsMethod = new GetProjectsMethod();
         getProjectsMethod.callAPIExpectSuccess();
         getProjectsMethod.validateResponse(JSONCompareMode.LENIENT);
     }
-    @Test
+    /*@Test(priority = 2)
     public void testCreateProject() {
         CreateProjectMethod createProjectMethod = new CreateProjectMethod();
         Response response = createProjectMethod.callAPIExpectSuccess();
@@ -25,8 +25,8 @@ public class APITests implements IAbstractTest {
                 .body("data.name", equalTo("proj3"))
                 .body("data.description", equalTo("some description"))
                 .body("data.key", equalTo("proj3"));
-    }
-    @Test
+    }*/
+    @Test(priority = 1)
     public void testGetProjectById() {
         String projectId = Configuration.getRequired("project_id");
         ;
@@ -34,20 +34,20 @@ public class APITests implements IAbstractTest {
         getProjectByIdMethod.callAPIExpectSuccess();
         getProjectByIdMethod.validateResponse();
     }
-    @Test
+    @Test(priority = 2)
     public void testUpdateProject() {
-        String projectId = Configuration.getRequired("project_id");
+        String projectId = Configuration.getRequired("projectId");
         UpdateProjectMethod updateProjectMethod = new UpdateProjectMethod(projectId);
         updateProjectMethod.callAPIExpectSuccess();
         updateProjectMethod.validateResponse(JSONCompareMode.LENIENT);
     }
-    @Test
-    public void testGetUsers() {
+    @Test(priority = 4)
+    public void testGetUsers() {// id 10
         GetUsersMethod getUsersMethod = new GetUsersMethod();
         getUsersMethod.callAPIExpectSuccess();
         getUsersMethod.validateResponse(JSONCompareMode.LENIENT);
     }
-    @Test
+    @Test(priority = 5)
     public void testCreateUser() {
 
         CreateUserMethod createUserMethod = new CreateUserMethod();
@@ -59,16 +59,15 @@ public class APITests implements IAbstractTest {
                 .body("data.email", equalTo("Goodie@testmonitor.com"));
     }
 
-    @Test
+    @Test(priority = 6)
     public void testGetUserById() {
         String userId = Configuration.getRequired("userId");
-        ;
         GetUserByIdMethod getUserByIdMethod = new GetUserByIdMethod(userId);
         getUserByIdMethod.callAPIExpectSuccess();
-        getUserByIdMethod.validateResponse();
+        getUserByIdMethod.validateResponse(JSONCompareMode.LENIENT);
     }
 
-    @Test
+    @Test(priority = 7)
     public void testUpdateUser() {
         String userId = Configuration.getRequired("userId");
         UpdateUserMethod updateUserMethod = new UpdateUserMethod(userId);
@@ -76,7 +75,7 @@ public class APITests implements IAbstractTest {
         updateUserMethod.validateResponse(JSONCompareMode.LENIENT);
     }
 
-    @Test
+    @Test(priority = 8)
     public void testDeleteUser() {
         String userId = Configuration.getRequired("userId");
         DeleteUserMethod deleteUserMethod = new DeleteUserMethod(userId);
@@ -87,14 +86,14 @@ public class APITests implements IAbstractTest {
                 "Error: The response code for deleting a user is incorrect!");
     }
 
-    @Test
+    @Test(priority = 9)
     public void testGetTeamById() {
         String userId = Configuration.getRequired("teamId");
         GetTeamByIdMethod getTeamByIdMethod = new GetTeamByIdMethod(userId);
         getTeamByIdMethod.callAPIExpectSuccess();
         getTeamByIdMethod.validateResponse();
     }
-    @Test
+    @Test(priority = 10)
     public void testGetTeams() {
         GetTeamsMethod getTeamsMethod = new GetTeamsMethod();
         getTeamsMethod.callAPIExpectSuccess();

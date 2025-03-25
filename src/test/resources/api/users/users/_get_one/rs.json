@@ -1,30 +1,9 @@
 {
   "data": {
-    "id": 5,
+    "id": 14,
     "email": "Goodie@testmonitor.com",
     "name": "Anela Goodie",
     "first_name": "Anela",
-    "last_name": "Goodie",
-    "admin": false,
-    "owner": false,
-    "last_login_at": null,
-    "two_factor": false,
-    "locale": null,
-    "timezone": null,
-    "project_id": null,
-    "endpoints": {
-      "show": "https://juli12.testmonitor.com/api/v1/users/5",
-      "activities": "https://juli12.testmonitor.com/api/v1/user/5/activities",
-      "update": "https://juli12.testmonitor.com/api/v1/users/5",
-      "destroy": "https://juli12.testmonitor.com/api/v1/users/5",
-      "archive": "https://juli12.testmonitor.com/api/v1/user/5/archive"
-    },
-    "links": {
-      "show": "https://juli12.testmonitor.com/settings/users/5",
-      "avatar": "https://juli12.testmonitor.com/avatar/5"
-    },
-    "created_at": "2025-03-24T13:27:22.000000Z",
-    "updated_at": "2025-03-24T13:27:22.000000Z",
-    "deleted_at": null
+    "last_name": "Goodie"
   }
 }

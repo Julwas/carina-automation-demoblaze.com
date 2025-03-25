@@ -8,7 +8,7 @@ import com.zebrunner.carina.api.http.HttpMethodType;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
-@Endpoint(url = "${base_url}/projects/${project_id}", methodType = HttpMethodType.PUT)
+@Endpoint(url = "${base_url}/projects/${projectId}", methodType = HttpMethodType.PUT)
 @RequestTemplatePath(path = "api/projects/projects/_put/rq.json")
 @ResponseTemplatePath(path = "api/projects/projects/_put/rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
@@ -16,6 +16,6 @@ public class UpdateProjectMethod extends BaseApiMethodV2 {
     public UpdateProjectMethod(String projectId) {
         super("api/projects/projects/_put/rq.json", "api/projects/projects/_put/rs.json");
         replaceUrlPlaceholder("base_url", Configuration.getRequired("api_url"));
-        replaceUrlPlaceholder("project_id", projectId);
+        replaceUrlPlaceholder("projectId", projectId);
     }
 }
