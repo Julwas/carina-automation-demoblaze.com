@@ -17,7 +17,7 @@
 
     <test name="Mobile drag and drop test">
         <classes>
-            <class name="com.zebrunner.carina.demo.MobileDragAndDropTest" />
+            <class name="com.zebrunner.carina.gui.MobileDragAndDropTest" />
         </classes>
     </test>
 

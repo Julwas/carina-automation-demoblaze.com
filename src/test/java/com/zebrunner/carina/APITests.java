@@ -1,7 +1,7 @@
 package com.zebrunner.carina;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.myApi.*;
+import com.zebrunner.carina.api.*;
 import com.zebrunner.carina.utils.config.Configuration;
 import io.restassured.response.Response;
 import org.skyscreamer.jsonassert.JSONCompareMode;
@@ -17,15 +17,7 @@ public class APITests implements IAbstractTest {
         getProjectsMethod.callAPIExpectSuccess();
         getProjectsMethod.validateResponse(JSONCompareMode.LENIENT);
     }
-    /*@Test(priority = 2)
-    public void testCreateProject() {
-        CreateProjectMethod createProjectMethod = new CreateProjectMethod();
-        Response response = createProjectMethod.callAPIExpectSuccess();
-        response.then()
-                .body("data.name", equalTo("proj3"))
-                .body("data.description", equalTo("some description"))
-                .body("data.key", equalTo("proj3"));
-    }*/
+
     @Test(priority = 1)
     public void testGetProjectById() {
         String projectId = Configuration.getRequired("project_id");
@@ -34,6 +26,7 @@ public class APITests implements IAbstractTest {
         getProjectByIdMethod.callAPIExpectSuccess();
         getProjectByIdMethod.validateResponse();
     }
+
     @Test(priority = 2)
     public void testUpdateProject() {
         String projectId = Configuration.getRequired("projectId");
@@ -41,12 +34,14 @@ public class APITests implements IAbstractTest {
         updateProjectMethod.callAPIExpectSuccess();
         updateProjectMethod.validateResponse(JSONCompareMode.LENIENT);
     }
+
     @Test(priority = 4)
-    public void testGetUsers() {// id 10
+    public void testGetUsers() {// id
         GetUsersMethod getUsersMethod = new GetUsersMethod();
         getUsersMethod.callAPIExpectSuccess();
         getUsersMethod.validateResponse(JSONCompareMode.LENIENT);
     }
+
     @Test(priority = 5)
     public void testCreateUser() {
 
@@ -93,6 +88,7 @@ public class APITests implements IAbstractTest {
         getTeamByIdMethod.callAPIExpectSuccess();
         getTeamByIdMethod.validateResponse();
     }
+
     @Test(priority = 10)
     public void testGetTeams() {
         GetTeamsMethod getTeamsMethod = new GetTeamsMethod();

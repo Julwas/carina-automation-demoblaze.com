@@ -11,7 +11,7 @@
 
     <test name="ZSG VNC Test">
         <classes>
-            <class name="com.zebrunner.carina.demo.esg.VNCTest"/>
+            <class name="com.zebrunner.carina.gui.regression.esg.VNCTest"/>
         </classes>
     </test>
 </suite>

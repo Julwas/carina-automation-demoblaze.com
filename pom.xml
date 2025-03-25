@@ -5,10 +5,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.zebrunner</groupId>
-	<artifactId>carina-demo</artifactId>
+	<artifactId>Carina-automation-demoblaze</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>Carina Demo</name>
+	<name>Carina automation demoblaze</name>
 	<url>http://www.zebrunner.com/</url>
 
 	<properties>
@@ -158,7 +158,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.1.0</version>
 				<configuration>
-					<argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>
+					<!--<argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>-->
 					<useSystemClassLoader>false</useSystemClassLoader>
 					<suiteXmlFiles>
 						<suiteXmlFile>${project.build.directory}/test-classes/testng_suites/${suite}.xml</suiteXmlFile>

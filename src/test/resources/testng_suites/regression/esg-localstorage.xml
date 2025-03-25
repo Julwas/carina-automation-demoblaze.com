@@ -11,7 +11,7 @@
 
     <test name="ZSG Local Storage Test">
         <classes>
-            <class name="com.zebrunner.carina.demo.esg.LocalStorageTest"/>
+            <class name="com.zebrunner.carina.gui.regression.esg.LocalStorageTest"/>
         </classes>
     </test>
 </suite>

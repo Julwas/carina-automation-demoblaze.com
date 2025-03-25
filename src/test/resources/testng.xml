@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <test name="Test1" parallel="methods">
+        <classes>
+            <class name="com.zebrunner.carina.gui.CartTests"/>
+            <class name="com.zebrunner.carina.gui.ContactTest"/>
+            <class name="com.zebrunner.carina.gui.LoginTests"/>
+            <class name="com.zebrunner.carina.gui.FunctionalTest"/>
+            <class name="com.zebrunner.carina.gui.ProductTests"/>
+            <class name="com.zebrunner.carina.gui.RegistrationTest"/>
+        </classes>
+    </test>
+    <test name="BrowserTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.zebrunner.carina.gui.CartTests"/>
+            <class name="com.zebrunner.carina.gui.ContactTest"/>
+            <class name="com.zebrunner.carina.gui.LoginTests"/>
+            <class name="com.zebrunner.carina.gui.FunctionalTest"/>
+            <class name="com.zebrunner.carina.gui.ProductTests"/>
+            <class name="com.zebrunner.carina.gui.RegistrationTest"/>
+        </classes>
+    </test>
+</suite>
