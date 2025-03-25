@@ -1,4 +1,4 @@
-package com.zebrunner.carina;
+package com.zebrunner.carina.api;
 
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.carina.api.*;
