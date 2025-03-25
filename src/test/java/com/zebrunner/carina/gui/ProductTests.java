@@ -49,7 +49,7 @@ public class ProductTests implements IAbstractTest {
 
     @Test(dataProvider = "categoryData", dataProviderClass = TestData.class)
     @MethodOwner(owner = "QA")
-    public void NavigationCategoryTest(String category, List<String> expectedProducts) {
+    public void NavigationOfCategoryTest(String category, List<String> expectedProducts) {
 
         homePage.selectCategory(category);
         LOGGER.info("Selected category: {}", category);

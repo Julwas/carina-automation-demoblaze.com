@@ -9,9 +9,8 @@ public class TestData {
     @DataProvider(name = "loginData")
     public static Object[][] loginData() {
         return new Object[][]{
-                {"User1", "password1"},
-                // {"user2", "password2"},
-                //{"user3", "wrongpassword"}
+                {"jwasilews@laba.solvd.com", "12345"},
+                {"jwasilews@laba.solvd.com", "123"}
         };
     }
 
@@ -27,8 +26,8 @@ public class TestData {
     @DataProvider(name = "registrationData")
     public static Object[][] registrationData() {
         return new Object[][]{
-                {"Lilia555", "password1"},
-                {"Lilia", "password2"}
+                {"jwasilewska@laba.solvd.com", "12345"},
+               // {"Lenas", "123456789"}
         };
     }
 
