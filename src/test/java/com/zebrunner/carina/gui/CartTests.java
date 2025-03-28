@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class CartTests implements IAbstractTest {
+public class CartTests extends BaseTest implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductTests.class);
     private HomePage homePage;
     private ProductPage productPage;
@@ -21,14 +21,9 @@ public class CartTests implements IAbstractTest {
 
     @BeforeMethod
     public void startDriver() {
-        homePage = new HomePage(getDriver());
-        homePage.open();
-        LOGGER.info("Home page is opened.");
-
         productPage = homePage.selectFirstProduct();
         productPage.addToCart();
         cartPage = homePage.openCart();
-
     }
 
     @Test

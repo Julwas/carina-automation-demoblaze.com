@@ -22,38 +22,55 @@ public class HomePage extends AbstractPage {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     @FindBy(id = "signin2")
     private ExtendedWebElement signUp;
+
     @FindBy(id = "sign-username")
     private ExtendedWebElement usernameField;
+
     @FindBy(id = "sign-password")
     private ExtendedWebElement passwordField;
+
     @FindBy(xpath = "//button[text()='Sign up']")
     private ExtendedWebElement signUpButton;
+
     @FindBy(xpath = "(//button[text()='Close'])[2]")
     private ExtendedWebElement secondCloseButton;
+
     @FindBy(xpath = "(//button[text()='Close'])[3]")
     private ExtendedWebElement loginFailureCloseButton;
+
     @FindBy(id = "login2")
     private ExtendedWebElement LogIn;
+
     @FindBy(id = "loginusername")
     private ExtendedWebElement logInUsernameField;
+
     @FindBy(id = "loginpassword")
     private ExtendedWebElement logInPasswordField;
+
     @FindBy(xpath = "//button[text()='Log in']")
     private ExtendedWebElement loginButton;
+
     @FindBy(id = "nameofuser")
     private ExtendedWebElement userLabel;
+
     @FindBy(xpath = "//div[contains(@class, 'alert')]")
     private ExtendedWebElement alertMessage;
+
     @FindBy(id = "logout2")
     private ExtendedWebElement logoutButton;
+
     @FindBy(xpath = "//a[text()='Contact']")
     private ExtendedWebElement contactLink;
+
     @FindBy(id = "recipient-email")
     private ExtendedWebElement contacEmailField;
+
     @FindBy(id = "recipient-name")
     private ExtendedWebElement contacNameField;
+
     @FindBy(id = "message-text")
     private ExtendedWebElement contacMessageField;
+
     @FindBy(xpath = "//button[text()='Send message']")
     private ExtendedWebElement sendMessageButton;
 
@@ -63,6 +80,7 @@ public class HomePage extends AbstractPage {
 
     @FindBy(xpath = "//a[contains(text(), 'Phones')]")
     private ExtendedWebElement phonesCategory;
+
     @FindBy(xpath = "//a[contains(text(), 'Monitors')]")
     private ExtendedWebElement monitorsCategory;
 
@@ -119,7 +137,7 @@ public class HomePage extends AbstractPage {
         alertHandler.handleAlertIfPresent();
     }
 
-    public void isUserFailure() {
+    public void ifLoginError() {
         LOGGER.info("Waiting for close button to appear...");
         if (loginFailureCloseButton.isElementPresent(10)) {
             LOGGER.info("Clicking on Close button...");

@@ -14,6 +14,7 @@ public class CartPage extends AbstractPage {
 
     @FindBy(xpath = "//tr[@class='success']")
     private List<ExtendedWebElement> cartItems;
+
     @FindBy(xpath = "//a[text()='Delete']")
     private ExtendedWebElement deleteButton;
 

@@ -12,17 +12,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-public class ProductTests implements IAbstractTest {
+public class ProductTests extends BaseTest implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductTests.class);
     private HomePage homePage;
-
-    @BeforeMethod
-    public void startDriver() {
-        homePage = new HomePage(getDriver());
-        homePage.open();
-        LOGGER.info("Home page is opened.");
-    }
-
     @Test
     @MethodOwner(owner = "QA")
     public void testProductDetails() {

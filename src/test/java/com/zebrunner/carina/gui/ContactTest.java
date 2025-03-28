@@ -9,16 +9,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ContactTest extends AbstractTest {
+public class ContactTest extends BaseTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductTests.class);
     private HomePage homePage;
-
-    @BeforeMethod
-    public void startDriver() {
-        homePage = new HomePage(getDriver());
-        homePage.open();
-
-    }
 
     @Test(dataProvider = "contactData", dataProviderClass = TestData.class)
     @MethodOwner(owner = "QA")

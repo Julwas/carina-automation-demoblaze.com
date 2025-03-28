@@ -15,7 +15,6 @@ public class FunctionalTest implements IAbstractTest {
 
     @Test
     @Parameters({"browser"})
-    @MethodOwner(owner = "QA")
     public void testMultipleBrowsers(@Optional("chrome") String browser) {
         System.out.println("Running test on: " + browser);
         Assert.assertNotNull(browser);
@@ -49,4 +48,5 @@ public class FunctionalTest implements IAbstractTest {
         System.out.println("Testing locale: " + locale);
         Assert.assertNotNull(locale);
     }
+
 }

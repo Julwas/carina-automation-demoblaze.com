@@ -9,13 +9,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTests implements IAbstractTest {
+public class LoginTests extends  BaseTest implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductTests.class);
     private HomePage homePage;
     @BeforeMethod
     public void startDriver(){
-        homePage = new HomePage(getDriver());
-        homePage.open();
         LOGGER.info("Home page is opened.");
         homePage.clickLogIn();
         pause(2);
@@ -41,7 +39,7 @@ public class LoginTests implements IAbstractTest {
     @MethodOwner(owner = "QA")
     public void testLoginFailure(String username, String password) {
         homePage.logInFailure(username, password);
-        homePage.isUserFailure();
+        homePage.ifLoginError();
         Assert.assertTrue(homePage.isLogInVisible(), "Error message not displayed for invalid login!");
     }
 }
