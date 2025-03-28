@@ -10,18 +10,42 @@ public class HomePage extends AbstractPage {
 
     @FindBy(id = "com.todoist:id/fab")
     private ExtendedWebElement addTaskButton;
-// xpath= "//android.widget.ImageButton[@content-desc="Quick add"]"
+    // xpath= "//android.widget.ImageButton[@content-desc="Quick add"]"
     @FindBy(id = "android:id/message")
     private ExtendedWebElement taskNameField;
 
     @FindBy(id = "android:id/button1")
     private ExtendedWebElement saveTaskButton;
-@FindBy(id = "dd")
-    private ExtendedWebElement taskButton;
+    @FindBy(id = "android:id/button/remove")
+    private ExtendedWebElement removeTaskButton;
+    @FindBy(xpath = "//android.view.View[@resource-id=\"test_tag_navigation\"]/android.view.View[1]")
+    private ExtendedWebElement browseButton;
+    @FindBy(xpath = "//android.view.View[@resource-id=\"test_tag_navigation\"]/android.view.View[1]")
+    private ExtendedWebElement settingsButton;
+    @FindBy(xpath = "//android.widget.Button[@text='Log out']")
+    private ExtendedWebElement logOutButton;
+    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
+    private ExtendedWebElement accountButton;
+    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
+    private ExtendedWebElement toDayButton;
+    @FindBy(xpath = "//androidx.compose.ui.platform.ComposeView[@resource-id=\"" +
+            "com.todoist:id/content_scrim_container\"]/android.view.View")
+    private ExtendedWebElement listOfTasks;
 
-    // ="//android.widget.ImageView[@content-desc="Add"]"
-   /* @FindBy(xpath = "//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/content_scrim_container\"]/android.view.View")
-private ExtendedWebElement backCklickElement;*/
+    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
+    private ExtendedWebElement myAccountButton;
+
+    @FindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[@resource-id=\"com.todoist:id/recycler_view\"]" +
+            "/android.widget.LinearLayout[6]/android.widget.RelativeLayout")
+    private ExtendedWebElement removeAccountButton;
+    @FindBy(id = "android:id/button1")
+    private ExtendedWebElement deleteButton;
+
+    @FindBy(id = "android:id/edit")
+    private ExtendedWebElement passwordConfirmField;
+
+    @FindBy(id = "android:id/button1")
+    private ExtendedWebElement deleteForeverButton;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -37,15 +61,40 @@ private ExtendedWebElement backCklickElement;*/
     public boolean isAddTaskButtonPresent() {
         return addTaskButton.isElementPresent();
     }
+
+    public boolean isListOfTaskPresent() {
+        return listOfTasks.isElementPresent();
+    }
+
     public boolean isTaskPresent(String taskName) {
         try {
             return driver.findElement(By.xpath("//android.widget.TextView[@text='" + taskName + "']")) != null;
         } catch (Exception e) {
-            return false;  // Если задача не найдена, возвращаем false
+            return false;
         }
     }
 
-public void taskDelete(){
-    taskButton.click();
-}
+    public void taskDelete() {
+        removeTaskButton.click();
+    }
+
+    public void toDayShow() {
+        toDayButton.click();
+    }
+
+    public void logoOutMethod() {
+        browseButton.click();
+        settingsButton.click();
+        logOutButton.click();
+    }
+
+    public void removeAccountMethod(String password) {
+        settingsButton.click();
+        myAccountButton.click();
+        removeAccountButton.click();
+        deleteButton.click();
+        passwordConfirmField.type(password);
+        deleteForeverButton.click();
+    }
+
 }

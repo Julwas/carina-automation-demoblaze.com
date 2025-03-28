@@ -7,7 +7,6 @@ import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static com.zebrunner.agent.core.webdriver.RemoteWebDriverFactory.getDriver;
 
 public class AndroidTests implements IAbstractTest, IMobileUtils {
     @Test
@@ -44,51 +43,49 @@ public class AndroidTests implements IAbstractTest, IMobileUtils {
         Assert.assertFalse(homePage.isTaskPresent(taskName), "The task has not been deleted!");
     }
 
-    /*@Test
+    @Test
     public void testLogout() {
         HomePage homePage = new HomePage(getDriver());
-        homePage.click("//android.widget.Button[@text='Settings']");
-        homePage.click("//android.widget.Button[@text='Log out']");
+        homePage.logoOutMethod();
         LoginPage loginPage = new LoginPage(getDriver());
-        Assert.assertTrue(loginPage.isElementPresent("//android.widget.Button[@text='Log in']"), "Выход не выполнен!");
+        Assert.assertTrue(loginPage.ContinueWithEmailButton.isElementPresent());
+    }
+    @Test
+    public void testRemoveAccount(String password) {
+        HomePage homePage = new HomePage(getDriver());
+        homePage.removeAccountMethod(password);
+        LoginPage loginPage = new LoginPage(getDriver());
+        Assert.assertTrue(loginPage.ContinueWithEmailButton.isElementPresent());
     }
 
-    @Test
-    public void testAppRestart() {
-        getDriver().quit();
-        getDriver().launchApp();
-        HomePage homePage = new HomePage(getDriver());
-        Assert.assertTrue(homePage.isElementPresent("//android.widget.Button[@content-desc='Add Task']"),
-                "Приложение не перезапустилось корректно!");
-    }
 
     @Test
     public void testHomeScreenVisible() {
         HomePage homePage = new HomePage(getDriver());
-        Assert.assertTrue(homePage.isElementPresent("//android.widget.Button[@content-desc='Add Task']"),
-                "Главный экран не отображается!");
+        Assert.assertTrue(homePage.isAddTaskButtonPresent(), "The home screen is not displayed!");
     }
 
     @Test
     public void testCheckTaskList() {
         HomePage homePage = new HomePage(getDriver());
-        Assert.assertTrue(homePage.isElementPresent("//android.widget.ListView"), "Список задач отсутствует!");
+        homePage.toDayShow();
+        Assert.assertTrue(homePage.isListOfTaskPresent(), "There is no task list!");
     }
 
-    @Test
+   /* @Test
     public void testAddMultipleTasks() {
         HomePage homePage = new HomePage(getDriver());
-        homePage.addTask("Задача 1");
-        homePage.addTask("Задача 2");
-        Assert.assertTrue(homePage.isTaskPresent("Задача 1"), "Первая задача не добавлена!");
-        Assert.assertTrue(homePage.isTaskPresent("Задача 2"), "Вторая задача не добавлена!");
+        homePage.addTask("Task 1");
+        homePage.addTask("Task2");
+        Assert.assertTrue(homePage.isTaskPresent("Task 1"), "The first task has not been added!");
+        Assert.assertTrue(homePage.isTaskPresent("Task 2"), "The first task has not been added");
     }
 
     @Test
     public void testLongPressTask() {
         HomePage homePage = new HomePage(getDriver());
-        homePage.longPress("//android.widget.TextView[@text='Задача 1']");
+        homePage.longPress("//android.widget.TextView[@text='Task 1']");
         Assert.assertTrue(homePage.isElementPresent("//android.widget.Button[@text='Edit']"),
-                "Меню редактирования не появилось!");
+                "The edit menu did not appear!");
     }*/
 }

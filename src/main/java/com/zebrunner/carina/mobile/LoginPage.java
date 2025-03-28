@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends AbstractPage implements IMobileUtils {
     @FindBy(id = "com.todoist:id/btn_email")
-    private ExtendedWebElement ContinueWithEmailButton;
+    public ExtendedWebElement ContinueWithEmailButton;
     //xpath = "//android.widget.Button[@resource-id=\"com.todoist:id/btn_email\"]"
     @FindBy(xpath = "//android.view.View[@resource-id=\"auth_button_tag\"]/android.widget.Button")
     private ExtendedWebElement loginButton;
