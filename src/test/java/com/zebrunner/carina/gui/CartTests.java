@@ -20,7 +20,7 @@ public class CartTests extends BaseTest implements IAbstractTest {
     private CartPage cartPage;
 
     @BeforeMethod
-    public void startDriver() {
+    public void addProductToCart() {
         productPage = homePage.selectFirstProduct();
         productPage.addToCart();
         cartPage = homePage.openCart();

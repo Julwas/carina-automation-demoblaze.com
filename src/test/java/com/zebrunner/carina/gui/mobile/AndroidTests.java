@@ -1,6 +1,7 @@
 package com.zebrunner.carina.gui.mobile;
 
 import com.zebrunner.carina.core.IAbstractTest;
+import com.zebrunner.carina.gui.TestData;
 import com.zebrunner.carina.mobile.HomePage;
 import com.zebrunner.carina.mobile.LoginPage;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
@@ -29,7 +30,7 @@ public class AndroidTests implements IAbstractTest, IMobileUtils {
                 "Login failed! The 'Add task' button was not found.");
     }
 
-    @Test
+    @Test(dataProvider = "taskName", dataProviderClass = TestData.class)
     public void testAddTask(String taskName) {
         HomePage homePage = new HomePage(getDriver());
         homePage.addTask(taskName);

@@ -13,6 +13,14 @@ public class TestData {
                 {"jwasilews@laba.solvd.com", "123"}
         };
     }
+@DataProvider(name = "taskName")
+    public static Object[] taskName() {
+        return new Object[][]{
+                {"Task1"},
+                {"Task2"}
+        };
+    }
+
 
     @DataProvider(name = "contactData")
     public static Object[][] contactData() {

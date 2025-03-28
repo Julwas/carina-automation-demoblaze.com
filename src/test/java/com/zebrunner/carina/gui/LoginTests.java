@@ -13,8 +13,7 @@ public class LoginTests extends  BaseTest implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductTests.class);
     private HomePage homePage;
     @BeforeMethod
-    public void startDriver(){
-        LOGGER.info("Home page is opened.");
+    public void clickLogInMethod(){
         homePage.clickLogIn();
         pause(2);
     }
