@@ -1,16 +1,15 @@
-package com.zebrunner.carina.mobile;
+package com.zebrunner.carina.mobile.ios;
 
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-
-public class HomePage extends AbstractPage {
+/*public class HomePage extends AbstractPage {
 
     @FindBy(id = "com.todoist:id/fab")
     private ExtendedWebElement addTaskButton;
-    // xpath= "//android.widget.ImageButton[@content-desc="Quick add"]"
+
     @FindBy(id = "android:id/message")
     private ExtendedWebElement taskNameField;
 
@@ -28,16 +27,9 @@ public class HomePage extends AbstractPage {
     private ExtendedWebElement accountButton;
     @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
     private ExtendedWebElement toDayButton;
-    @FindBy(xpath = "//androidx.compose.ui.platform.ComposeView[@resource-id=\"" +
-            "com.todoist:id/content_scrim_container\"]/android.view.View")
+    @FindBy(xpath = "//androidx:id/content_scrim_container/android.view.View")
     private ExtendedWebElement listOfTasks;
 
-    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
-    private ExtendedWebElement myAccountButton;
-
-    @FindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[@resource-id=\"com.todoist:id/recycler_view\"]" +
-            "/android.widget.LinearLayout[6]/android.widget.RelativeLayout")
-    private ExtendedWebElement removeAccountButton;
     @FindBy(id = "android:id/button1")
     private ExtendedWebElement deleteButton;
 
@@ -68,7 +60,8 @@ public class HomePage extends AbstractPage {
 
     public boolean isTaskPresent(String taskName) {
         try {
-            return driver.findElement(By.xpath("//android.widget.TextView[@text='" + taskName + "']")) != null;
+            return driver.findElement
+                    (By.xpath("//android.widget.TextView[@text='" + taskName + "']")) != null;
         } catch (Exception e) {
             return false;
         }
@@ -87,14 +80,5 @@ public class HomePage extends AbstractPage {
         settingsButton.click();
         logOutButton.click();
     }
+}*/
 
-    public void removeAccountMethod(String password) {
-        settingsButton.click();
-        myAccountButton.click();
-        removeAccountButton.click();
-        deleteButton.click();
-        passwordConfirmField.type(password);
-        deleteForeverButton.click();
-    }
-
-}
