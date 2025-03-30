@@ -3,13 +3,10 @@ package com.zebrunner.carina.gui;
 import com.zebrunner.carina.core.IAbstractTest;
 
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
-import com.zebrunner.carina.gui.pages.HomePage;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RegistrationTest extends BaseTest implements IAbstractTest {
-    private HomePage homePage;
     @Test(dataProvider = "registrationData", dataProviderClass = TestData.class)
     @MethodOwner(owner = "QA")
     public void testSignup(String username, String password) {

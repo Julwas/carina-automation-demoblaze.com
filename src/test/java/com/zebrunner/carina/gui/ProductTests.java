@@ -2,10 +2,8 @@ package com.zebrunner.carina.gui;
 
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
-import com.zebrunner.carina.gui.pages.HomePage;
 import com.zebrunner.carina.gui.pages.ProductPage;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +12,6 @@ import java.util.List;
 
 public class ProductTests extends BaseTest implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductTests.class);
-    private HomePage homePage;
     @Test
     @MethodOwner(owner = "QA")
     public void testProductDetails() {
