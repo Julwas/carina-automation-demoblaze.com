@@ -16,18 +16,25 @@ public class HomePage extends AbstractPage {
 
     @FindBy(id = "android:id/button1")
     private ExtendedWebElement saveTaskButton;
+
     @FindBy(id = "android:id/button/remove")
     private ExtendedWebElement removeTaskButton;
+
     @FindBy(xpath = "//android.view.View[@resource-id=\"test_tag_navigation\"]/android.view.View[1]")
     private ExtendedWebElement browseButton;
+
     @FindBy(xpath = "//android.view.View[@resource-id=\"test_tag_navigation\"]/android.view.View[1]")
     private ExtendedWebElement settingsButton;
+
     @FindBy(xpath = "//android.widget.Button[@text='Log out']")
     private ExtendedWebElement logOutButton;
+
     @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
     private ExtendedWebElement accountButton;
+
     @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
     private ExtendedWebElement toDayButton;
+
     @FindBy(xpath = "//androidx:id/content_scrim_container/android.view.View")
     private ExtendedWebElement listOfTasks;
 
