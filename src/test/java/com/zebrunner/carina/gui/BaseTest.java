@@ -13,34 +13,6 @@ import org.testng.annotations.BeforeMethod;
 public class BaseTest extends AbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseTest.class);
     protected HomePage homePage;
-
-    /*@BeforeMethod
-    public void startDriver() {
-        LOGGER.info("Запуск WebDriver...");
-        if (getDriver() == null) {
-            LOGGER.error("WebDriver не инициализирован! Проверь конфигурацию.");
-            throw new IllegalStateException("WebDriver == null!");
-        }
-
-        LOGGER.info("Инициализация HomePage...");
-        homePage = new HomePage(getDriver());
-
-        if (homePage == null) {
-            LOGGER.error("homePage не инициализирован!");
-            throw new IllegalStateException("homePage == null после создания!");
-        }
-
-        homePage.open();
-        LOGGER.info("HomePage открыт.");
-    }
-
-    @AfterMethod
-    public void stopDriver() {
-        if (getDriver() != null) {
-            getDriver().quit();
-            LOGGER.info("WebDriver закрыт.");
-        }
-    }*/
     @BeforeMethod
     public void startDriver(){
         homePage = new HomePage(getDriver());
