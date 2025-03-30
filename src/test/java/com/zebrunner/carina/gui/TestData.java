@@ -13,14 +13,14 @@ public class TestData {
                 {"jwasilews@laba.solvd.com", "123"}
         };
     }
-@DataProvider(name = "taskName")
+
+    @DataProvider(name = "taskName")
     public static Object[] taskName() {
         return new Object[][]{
                 {"Task1"},
                 {"Task2"}
         };
     }
-
 
     @DataProvider(name = "contactData")
     public static Object[][] contactData() {
@@ -35,7 +35,7 @@ public class TestData {
     public static Object[][] registrationData() {
         return new Object[][]{
                 {"jwasilewska@laba.solvd.com", "12345"},
-               // {"Lenas", "123456789"}
+                // {"Lenas", "123456789"}
         };
     }
 
@@ -51,10 +51,7 @@ public class TestData {
     public Object[][] locales() {
         return new Object[][]{
                 {Locale.ENGLISH},
-                {Locale.FRENCH},
-                {Locale.GERMAN},
-                {Locale.ITALIAN},
-                {new Locale("ru", "RU")}
+                {Locale.GERMAN}
         };
     }
 

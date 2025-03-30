@@ -1,8 +1,9 @@
-package com.zebrunner.carina.gui.pages;
+package com.zebrunner.carina.gui.pages.desktop;
 
 import com.zebrunner.carina.gui.components.AlertHandler;
+import com.zebrunner.carina.gui.pages.common.HomePageBase;
+import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
@@ -17,8 +18,8 @@ import java.util.stream.Collectors;
 
 import static org.testng.internal.objects.InstanceCreator.newInstance;
 
-
-public class HomePage extends AbstractPage {
+@DeviceType(pageType = DeviceType.Type.DESKTOP, parentClass = HomePageBase.class)
+public class HomePage extends HomePageBase {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     @FindBy(id = "signin2")
     private ExtendedWebElement signUp;
@@ -102,6 +103,11 @@ public class HomePage extends AbstractPage {
         ;
     }
 
+    @Override
+    public void signUp(String username, String password) {
+
+    }
+
     public void sigIn(String username, String password) {
         usernameField.type(username);
         passwordField.type(password);
@@ -128,6 +134,11 @@ public class HomePage extends AbstractPage {
         logInUsernameField.type(username);
         logInPasswordField.type(password);
         loginButton.click();
+    }
+
+    @Override
+    public void logOut() {
+
     }
 
     public void logInFailure(String username, String password) {

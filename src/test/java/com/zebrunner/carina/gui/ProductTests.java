@@ -2,7 +2,7 @@ package com.zebrunner.carina.gui;
 
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
-import com.zebrunner.carina.gui.pages.ProductPage;
+import com.zebrunner.carina.gui.pages.desktop.ProductPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.slf4j.Logger;

@@ -1,14 +1,14 @@
-package com.zebrunner.carina.gui.pages;
+package com.zebrunner.carina.gui.pages.desktop;
 
+import com.zebrunner.carina.gui.pages.common.CartPageBase;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class CartPage extends AbstractPage {
+public class CartPage extends CartPageBase {
     @FindBy(xpath = "//button[text()='Place Order']")
     private ExtendedWebElement placeOrderButton;
 

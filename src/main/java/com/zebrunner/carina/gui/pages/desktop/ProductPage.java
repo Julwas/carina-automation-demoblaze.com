@@ -1,4 +1,4 @@
-package com.zebrunner.carina.gui.pages;
+package com.zebrunner.carina.gui.pages.desktop;
 
 import com.zebrunner.carina.gui.components.AlertHandler;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
