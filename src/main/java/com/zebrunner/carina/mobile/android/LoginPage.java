@@ -9,10 +9,10 @@ public class LoginPage extends LoginPageBase {
     @FindBy(id = "com.todoist:id/btn_email")
     public ExtendedWebElement ContinueWithEmailButton;
 
-    @FindBy(xpath = "//android.view.View[@resource-id=\"auth_button_tag\"]/android.widget.Button")
+    @FindBy(xpath = "//*[@resource-id=\"auth_button_tag\"]/android.widget.Button")
     private ExtendedWebElement loginButton;
 
-    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"email\"]/android.view.View")
+    @FindBy(xpath = "//*[@resource-id=\"email\"]/*")
     private ExtendedWebElement emailField;
 
     @FindBy(id = "password")

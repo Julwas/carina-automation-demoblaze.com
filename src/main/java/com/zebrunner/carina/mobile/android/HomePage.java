@@ -21,22 +21,22 @@ public class HomePage extends HomeBasePage {
     @FindBy(id = "android:id/button/remove")
     private ExtendedWebElement removeTaskButton;
 
-    @FindBy(xpath = "//android.view.View[@resource-id=\"test_tag_navigation\"]/android.view.View[1]")
+    @FindBy(xpath = "//*[@resource-id=\"test_tag_navigation\"]/*[1]")
     private ExtendedWebElement browseButton;
 
-    @FindBy(xpath = "//android.view.View[@resource-id=\"test_tag_navigation\"]/android.view.View[1]")
+    @FindBy(xpath = "//*[@resource-id=\"test_tag_navigation\"]/*[1]")
     private ExtendedWebElement settingsButton;
 
     @FindBy(xpath = "//android.widget.Button[@text='Log out']")
     private ExtendedWebElement logOutButton;
 
-    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
+    @FindBy(xpath = "(//*[@resource-id=\"android:id/icon\"])[2]")
     private ExtendedWebElement accountButton;
 
-    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"android:id/icon\"])[2]")
+    @FindBy(xpath = "(//*[@resource-id=\"android:id/icon\"])[2]")
     private ExtendedWebElement toDayButton;
 
-    @FindBy(xpath = "//androidx:id/content_scrim_container/android.view.View")
+    @FindBy(xpath = "//*[@resource-id='androidx:id/content_scrim_container']/*")
     private ExtendedWebElement listOfTasks;
 
     @FindBy(id = "android:id/button1")
