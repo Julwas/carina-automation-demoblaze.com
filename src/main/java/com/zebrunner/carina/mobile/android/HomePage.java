@@ -1,12 +1,13 @@
 package com.zebrunner.carina.mobile.android;
 
+import com.zebrunner.carina.mobile.common.HomeBasePage;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends AbstractPage {
+public class HomePage extends HomeBasePage {
 
     @FindBy(id = "com.todoist:id/fab")
     private ExtendedWebElement addTaskButton;
