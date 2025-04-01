@@ -16,7 +16,7 @@ public abstract class CartPageBase extends AbstractPage {
         super(driver);
     }
 
-    public abstract void getDeleteProduct();
+    public abstract void clickDeleteProduct();
 
     public abstract boolean isItemInCart();
 
