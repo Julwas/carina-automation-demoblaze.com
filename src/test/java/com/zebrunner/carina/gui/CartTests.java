@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class CartTests extends BaseTest implements IAbstractTest {
+public class CartTests extends BaseTest  {
     private ProductPage productPage;
     private CartPage cartPage;
 
