@@ -22,7 +22,7 @@ public class CartPage extends CartPageBase {
         super(driver);
     }
 
-    public void getDeleteProduct() {
+    public void clickDeleteProduct() {
         deleteButton.click();
     }
 

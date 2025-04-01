@@ -35,7 +35,7 @@ public class CartTests extends BaseTest  {
     public void testRemoveFromCart() {
 
         cartPage.isItemInCart();
-        cartPage.getDeleteProduct();
+        cartPage.clickDeleteProduct();
         Assert.assertFalse(cartPage.isItemInCart(), "Item removed from cart!");
     }
 
